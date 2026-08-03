@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manga-Bridge — Politique de confidentialité</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #e0e0e0;
+      background: #1a1a2e;
+      line-height: 1.7;
+    }
+    h1 { color: #f16522; border-bottom: 2px solid #f16522; padding-bottom: 8px; }
+    h2 { color: #f16522; margin-top: 32px; }
+    p, li { color: #ccc; }
+    a { color: #f16522; }
+    .badge {
+      display: inline-block;
+      background: #27ae60;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      vertical-align: middle;
+    }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #333; color: #888; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+<h1>🛡️ Politique de confidentialité — Manga-Bridge Universal</h1>
+
+<p><strong>Dernière mise à jour :</strong> juillet 2025</p>
+
+<p>
+  Manga-Bridge Universal est une extension Chrome 100% locale qui compare votre collection
+  <a href="https://www.mangacollec.com" target="_blank" rel="noopener">MangaCollec</a>
+  avec les sites de vente en ligne pour vous éviter d'acheter des mangas que vous possédez déjà.
+  Tout fonctionne en temps réel, sans envoyer aucune donnée en ligne.
+</p>
+
+<p>
+  Cette extension ne communique avec aucun serveur tiers. Toutes les données sont
+  stockées <span class="badge">localement</span> sur votre appareil, dans le
+  stockage isolé de l'extension (<code>chrome.storage.local</code>).
+</p>
+
+<h2>1. Données collectées</h2>
+
+<p>L'extension stocke uniquement les données suivantes, exclusivement en local :</p>
+
+<ul>
+  <li><strong>Pseudo MangaCollec</strong> — saisi manuellement par vous, utilisé pour récupérer votre collection.</li>
+  <li><strong>Base de correspondance</strong> — liste des mangas de votre collection (titre, éditeur, tomes, édition), synchronisée depuis MangaCollec.</li>
+  <li><strong>Base annexes</strong> — entrées ajoutées manuellement par vous pour des titres non présents sur MangaCollec.</li>
+  <li><strong>Éditeurs et genres appris</strong> — récupérés depuis MangaCollec lors d'une synchro, stockés localement.</li>
+  <li><strong>Sélecteurs configurés</strong> — règles CSS apprises pour chaque site marchand que vous configurez (titre, case, tome...).</li>
+  <li><strong>Paramètres</strong> — position du panneau, sites activés, mots de bruit personnalisés, préférences d'affichage.</li>
+  <li><strong>Historique de matching</strong> — journal des correspondances trouvées sur les sites (titre, site, score, date).</li>
+</ul>
+
+<p><strong>Aucune de ces données n'est envoyée à un serveur tiers.</strong></p>
+
+<h2>2. Accès aux pages web</h2>
+
+<p>
+  L'extension s'exécute sur les sites marchands que vous activez pour :
+</p>
+
+<ul>
+  <li>Identifier les cases de mangas affichées à l'écran.</li>
+  <li>Comparer les titres avec votre collection locale.</li>
+  <li>Afficher un badge de correspondance (pourcentage + nom) sur chaque case.</li>
+</ul>
+
+<p>
+  Le contenu des pages que vous visitez <strong>n'est jamais lu, enregistré ou transmis</strong>
+  en dehors du contexte de la page affichée. L'extension ne fait qu'observer le DOM pour
+  détecter les mangas et afficher des badges en temps réel.
+</p>
+
+<h2>3. Navigation automatique (synchro)</h2>
+
+<p>
+  Lors d'une synchronisation, l'extension ouvre temporairement des onglets vers
+  MangaCollec pour récupérer votre collection, la liste des éditeurs et des genres.
+  Ces onglets sont fermés automatiquement une fois les données récupérées.
+</p>
+
+<h2>4. Stockage et conservation</h2>
+
+<p>
+  Toutes les données sont conservées dans le stockage local de l'extension, sur votre
+  appareil. Elles persistent tant que vous ne désinstallez pas l'extension ou que vous
+  ne les videz pas manuellement depuis les options.
+</p>
+
+<ul>
+  <li><strong>Suppression manuelle :</strong> disponible depuis les options (boutons « Vider la base », « Vider les éditeurs », etc.).</li>
+  <li><strong>Sauvegarde :</strong> vous pouvez exporter/importer vos données depuis les options. Le fichier de sauvegarde est généré localement.</li>
+  <li><strong>Désinstallation :</strong> toutes les données sont supprimées automatiquement.</li>
+</ul>
+
+<h2>5. Partage des données</h2>
+
+<p><strong>Aucune donnée n'est partagée avec aucun tiers.</strong></p>
+
+<p>
+  Manga-Bridge n'utilise aucun service de suivi, aucune publicité, aucun analytics,
+  et aucun serveur externe.
+</p>
+
+<h2>6. Open source</h2>
+
+<p>
+  Le code source de l'extension est entièrement disponible et peut être audité par
+  quiconque. Aucune fonctionnalité cachée ou malveillante n'est présente.
+</p>
+
+<h2>7. Contact</h2>
+
+<p>
+  Pour toute question concernant cette politique ou vos données, contactez-nous via
+  les avis et commentaires du Chrome Web Store ou l'adresse de support de l'extension.
+</p>
+
+<footer>
+  <p>Manga-Bridge Universal — Extension Chrome open-source.</p>
+</footer>
+
+</body>
+</html>
