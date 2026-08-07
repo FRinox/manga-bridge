@@ -3,7 +3,7 @@
 > Compare ta collection [MangaCollec](https://www.mangacollec.com) avec les sites de vente en ligne pour éviter d'acheter des mangas que tu possèdes déjà. 100% local, zéro tracking.
 
 ![Manga-Bridge](https://img.shields.io/badge/Chrome-Extension-orange)
-![Version](https://img.shields.io/badge/Version-1.0.1-green)
+![Version](https://img.shields.io/badge/Version-1.0.0-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Privacy](https://img.shields.io/badge/Privacy-100%25%20Local-brightgreen)
 
@@ -76,10 +76,18 @@ manga-bridge/
 ├── manifest.json              # Configuration de l'extension
 ├── background.js              # Service worker
 ├── content/                   # Scripts injectés dans les pages
-│   ├── site-injector.js       # Injection sur les sites marchands
-│   ├── matcher.js             # Moteur de matching
+│   ├── site-injector.js       # Orchestrateur : état global, init, observer
+│   ├── learn-ui.js            # Positionnement, candidats, auto-détection de base
+│   ├── learn-flow.js          # Flux d'apprentissage manuel (étapes, cleanup)
+│   ├── auto-detect-flow.js    # Flux d'auto-détection complet
+│   ├── card-processing.js     # Extraction, badges, traitement des cartes
+│   ├── control-panel.js       # Panneau de contrôle, sync, import
+│   ├── correction-menu.js     # Menu de correction (recherche, alias, ignore)
+│   ├── matcher.js             # Moteur de matching (wrapper)
 │   ├── mangacollec-bridge.js  # Bridge vers MangaCollec
-│   └── mangacollec-inject.js  # Injection sur MangaCollec
+│   ├── mangacollec-inject.js  # Injection sur MangaCollec
+│   ├── mangacollec-series-genre-capture.js  # Capture des genres
+│   └── site-injector.css      # Styles injectés
 ├── popup/                     # Popup de l'extension
 │   ├── popup.html
 │   ├── popup.css
@@ -89,7 +97,7 @@ manga-bridge/
 │   ├── options.css
 │   └── options.js
 ├── shared/                    # Utilitaires partagés
-│   ├── matching-utils.js      # Algorithme de matching
+│   ├── matching-utils.js      # Algorithme de matching (TextProcessor, MBMatching)
 │   ├── storage.js             # Couche de stockage
 │   └── mascot.js              # Mascotte de l'extension
 └── icons/                     # Icônes de l'extension
