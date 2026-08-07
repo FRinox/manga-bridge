@@ -3,7 +3,7 @@
 > Compare ta collection [MangaCollec](https://www.mangacollec.com) avec les sites de vente en ligne pour éviter d'acheter des mangas que tu possèdes déjà. 100% local, zéro tracking.
 
 ![Manga-Bridge](https://img.shields.io/badge/Chrome-Extension-orange)
-![Version](https://img.shields.io/badge/Version-1.0.0-green)
+![Version](https://img.shields.io/badge/Version-1.0.2-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Privacy](https://img.shields.io/badge/Privacy-100%25%20Local-brightgreen)
 
